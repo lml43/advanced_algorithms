@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MatrixChain {
 
-    static int[] p = {4,5,2,1,2,3};
+    static int[] p = {5,4,6,2,7};
     static int[][] m;
     static int[][] s;
 
@@ -54,7 +54,7 @@ public class MatrixChain {
 
         System.out.print(String.format("%6s", "|"));
         for (int i = 0; i < mat[0].length; i++) {
-            System.out.print(String.format("%6s", i));
+            System.out.print(String.format("%6s", (i+1)));
         }
         System.out.println();
         for (int i = 0; i <= mat[0].length; i++) {
@@ -62,7 +62,7 @@ public class MatrixChain {
         }
         for (int i = 0; i < mat.length; i++) {
             System.out.println();
-            System.out.print(String.format("%6s", i+" |"));
+            System.out.print(String.format("%6s", (i+1)+" |"));
             for (int j = 0; j < mat[i].length; j++) {
                 System.out.print(String.format("%6s", mat[i][j]));
             }
