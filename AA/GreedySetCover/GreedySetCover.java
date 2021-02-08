@@ -30,8 +30,15 @@ public class GreedySetCover {
         List<Set<Integer>> A = new ArrayList<>();
 
         while (U.size() > 0) {
+            System.out.println("---------------------------");
             Set<Integer> S = selectMaxSet(U);
             A.add(S);
+            System.out.print("A:(");
+            A.forEach(s -> {
+                printSet(s);
+                System.out.print(", ");
+            });
+            System.out.print(")");
             U.removeAll(S);
         }
     }
@@ -51,7 +58,19 @@ public class GreedySetCover {
             }
         }
 
+        System.out.println();
+        System.out.println("Max Set:");
+        printSet(resSet);
+        System.out.println();
         return resSet;
+    }
+
+    private static void printSet(Set<Integer> s) {
+        System.out.print("{");
+        for (int i : s) {
+            System.out.print(i + ",");
+        }
+        System.out.print("}");
     }
 
 }

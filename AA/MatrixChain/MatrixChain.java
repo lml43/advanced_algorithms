@@ -1,9 +1,5 @@
 package MatrixChain;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 public class MatrixChain {
 
     static int[] p = {5,4,6,2,7};
